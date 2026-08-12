@@ -1,6 +1,12 @@
 const nav = document.querySelector('.nav');
 const menu = document.querySelector('.menu');
 const navLinks = document.querySelectorAll('.nav nav a');
+const loader = document.querySelector('.loader');
+
+window.addEventListener('load', () => {
+  setTimeout(() => loader?.classList.add('hide'), 1500);
+});
+
 menu?.addEventListener('click',()=>nav.classList.toggle('open'));
 navLinks.forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 
