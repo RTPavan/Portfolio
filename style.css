@@ -408,8 +408,98 @@ body {
 .project:hover::after {
   transform: scale(1.5);
 }
-
-
+.timeline {
+    border-top: 1px solid #444;
+}
+.timeline-item {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    gap: 20px;
+    padding: 35px 0;
+    border-bottom: 1px solid #444;
+}
+.timeline-item > span {
+    color: #666;
+}
+.timeline-item small {
+    font-size: .55rem;
+    letter-spacing: .15em;
+    color: #777;
+}
+.timeline-item h3 {
+    font-size: 1.7rem;
+    margin: 8px 0;
+}
+.timeline-item p {
+    color: #999;
+    line-height: 1.5;
+}
+.philosophy {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.statement {
+    font-size: clamp(4rem, 13vw, 13rem);
+    line-height: .75;
+    letter-spacing: -.09em;
+    font-weight: 900;
+    margin: 80px 0 60px;
+}
+.statement span {
+    color: #777;
+}
+.statement-sub {
+    max-width: 600px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-left: 35%;
+    color: #555;
+}
+.contact-layout {
+    align-items: end;
+}
+.contact h2 {
+    font-size: clamp(3rem, 7vw, 7rem);
+}
+.contact-layout > div > p {
+    color: #999;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-top: 35px;
+}
+.contact-card {
+    border-top: 1px solid #444;
+    padding-top: 25px;
+}
+.contact-card > span {
+    font-size: .6rem;
+    color: #777;
+    letter-spacing: .15em;
+}
+.contact-card > a {
+    display: block;
+    color: #f2f0eb;
+    font-size: clamp(1.3rem, 2.5vw, 2.4rem);
+    text-decoration: none;
+    margin: 25px 0 45px;
+}
+.links {
+    display: flex;
+    gap: 25px;
+}
+.links a {
+    color: #f2f0eb;
+    text-decoration: none;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+}
+.contact em {
+    color: #fff;
+    -webkit-text-stroke: 1px #fff;
+}
 footer {
     display: flex;
     justify-content: space-between;
