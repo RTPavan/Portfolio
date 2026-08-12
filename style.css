@@ -394,6 +394,9 @@ body {
   border-bottom: 1px solid #111;
   padding-bottom: 7px;
 }
+.project-link + .project-link { 
+    margin-left: 30px; 
+}
 .project::after {
   content: "";
   position: absolute;
@@ -441,7 +444,7 @@ body {
     justify-content: center;
 }
 .statement {
-    font-size: clamp(4rem, 13vw, 13rem);
+    font-size: clamp(3rem, 9vw, 9rem);
     line-height: .75;
     letter-spacing: -.09em;
     font-weight: 900;
@@ -513,4 +516,105 @@ footer {
 footer a {
     color: #aaa;
     text-decoration: none;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes float {
+    50% {
+        transform: translateY(-14px) rotate(2deg);
+    }
+}
+@media (max-width: 800px) {
+    .nav {
+        height: 65px;
+    }
+    .nav nav,
+    .nav-cta {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    .hero {
+        padding: 120px 6vw 80px;
+        min-height: 100svh;
+    }
+    .hero h1 {
+        font-size: clamp(4rem, 17vw, 7rem);
+    }
+    .orbital {
+        width: 95vw;
+        right: -25vw;
+        opacity: .25;
+    }
+    .hero-text {
+        max-width: 380px;
+    }
+    .section {
+        padding: 90px 6vw;
+    }
+    .about-layout,
+    .edu-layout,
+    .contact-layout,
+    .skills-head,
+    .projects-head {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        margin-top: 50px;
+    }
+    .section h2 {
+        font-size: clamp(3.5rem, 16vw, 6rem);
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .project {
+        min-height: 420px;
+    }
+    .skill-list > div {
+        grid-template-columns: 12% 1fr;
+    }
+    .skill-list span {
+        grid-column: 2;
+        margin-top: 8px;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        min-height: 430px;
+    }
+
+    .project-image {
+        left: 5%;
+        top: 10%;
+        width: 90%;
+        height: 80%;
+    }
+
+    .project h3 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .project-link + .project-link {
+        margin-left: 15px;
+    }
+    .statement {
+        font-size: clamp(4rem, 19vw, 9rem);
+    }
+    .statement-sub {
+        margin-left: 0;
+    }
+    .stats {
+        gap: 20px;
+        justify-content: space-between;
+    }
+    footer {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
 }
