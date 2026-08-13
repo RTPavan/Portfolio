@@ -400,11 +400,11 @@ body {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 16px;
 }
 .project {
-  min-height: 460px;
-  padding: 30px;
+  min-height: 420px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -477,8 +477,8 @@ body {
 .timeline-item {
     display: grid;
     grid-template-columns: 10% 1fr;
-    gap: 20px;
-    padding: 35px 0;
+    gap: 18px;
+    padding: 26px 0;
     border-bottom: 1px solid #444;
 }
 .timeline-item > span {
@@ -599,22 +599,109 @@ footer a {
         display: block;
     }
     .hero {
-        padding: 120px 6vw 80px;
+        padding: 110px 6vw 80px;
         min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+    .hero-copy {
+        order: 2;
+        max-width: 100%;
+        text-align: center;
     }
     .hero h1 {
-        font-size: clamp(4rem, 17vw, 7rem);
+        font-size: clamp(2.3rem, 11vw, 4.2rem);
     }
-    .orbital {
-        width: 95vw;
-        right: -25vw;
-        opacity: .25;
+    .eyebrow {
+        margin-bottom: 18px;
+        font-size: .48rem;
     }
     .hero-text {
-        max-width: 380px;
+        max-width: 100%;
+        margin: 20px auto 26px;
+        font-size: .88rem;
+    }
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .visual {
+        order: 1;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .orbit {
+        width: min(92vw, 440px);
+        right: auto;
+        opacity: .35;
+    }
+    .photo {
+        width: min(60vw, 260px);
+        height: 320px;
+        margin: 0 auto;
+    }
+    .student {
+        right: 8vw;
+        bottom: 12px;
+    }
+    .scroll {
+        display: none;
     }
     .section {
-        padding: 90px 6vw;
+        padding: 70px 6vw;
+    }
+    .section h2 {
+        font-size: clamp(2.1rem, 10vw, 4.1rem);
+    }
+    .section-kicker,
+    .eyebrow {
+        font-size: .46rem;
+    }
+    .about-text p:not(.lead),
+    .skills-head p,
+    .projects-head p,
+    .timeline-item p,
+    .contact-layout > div > p,
+    .statement-sub,
+    .project p,
+    .about-text p {
+        font-size: .82rem;
+        line-height: 1.6;
+    }
+    .lead {
+        font-size: 1.05rem;
+        line-height: 1.45;
+    }
+    .stats strong {
+        font-size: 1.2rem;
+    }
+    .stats span {
+        font-size: .5rem;
+    }
+    .skill-list strong,
+    .skill-list span,
+    .project-link,
+    .links a,
+    .nav nav a,
+    .button,
+    .cv {
+        font-size: .62rem;
+    }
+    .timeline-item h3 {
+        font-size: 1.25rem;
+    }
+    .statement {
+        font-size: clamp(2.3rem, 10vw, 4.2rem);
+        margin: 40px 0 30px;
+    }
+    .contact-card > a {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+        margin: 18px 0 25px;
     }
     .about-layout,
     .edu-layout,
@@ -622,31 +709,40 @@ footer a {
     .skills-head,
     .projects-head {
         grid-template-columns: 1fr;
-        gap: 45px;
-        margin-top: 50px;
+        gap: 24px;
+        margin-top: 26px;
     }
     .section h2 {
-        font-size: clamp(3.5rem, 16vw, 6rem);
+        font-size: clamp(2.2rem, 10.5vw, 4.3rem);
     }
     .project-grid {
         grid-template-columns: 1fr;
     }
     .project {
-        min-height: 420px;
+        min-height: 360px;
+        padding: 18px 18px 20px;
+    }
+    .project h3 {
+        font-size: clamp(1.9rem, 8vw, 3rem);
+    }
+    .project p {
+        font-size: 0.8rem;
     }
     .skill-list > div {
         grid-template-columns: 12% 1fr;
+        padding: 18px 0;
     }
     .skill-list span {
         grid-column: 2;
-        margin-top: 8px;
+        margin-top: 6px;
     }
     .project-grid {
         grid-template-columns: 1fr;
     }
 
     .project {
-        min-height: 430px;
+        min-height: 350px;
+        padding: 16px 16px 18px;
     }
 
     .project-image {
@@ -657,11 +753,11 @@ footer a {
     }
 
     .project h3 {
-        font-size: clamp(2.5rem, 12vw, 4rem);
+        font-size: clamp(2rem, 9vw, 3.4rem);
     }
 
     .project-link + .project-link {
-        margin-left: 15px;
+        margin-left: 10px;
     }
     .statement {
         font-size: clamp(4rem, 19vw, 9rem);
